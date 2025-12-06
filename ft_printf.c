@@ -6,7 +6,7 @@
 /*   By: wini <wini@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/26 16:35:38 by wsilveir          #+#    #+#             */
-/*   Updated: 2025/12/06 18:26:58 by wini             ###   ########.fr       */
+/*   Updated: 2025/12/06 18:35:01 by wini             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	ft_print_convert(char c, va_list args)
 	else if (c == 's')
 		return (ft_putstr(va_arg(args, char *)));
 	else if (c == 'p')
-		return (ft_putnbr_pointer(va_arg(args, char *)));
+		return (ft_putnbr_pointer((size_t) va_arg(args, char *)));
 	else if (c == 'u')
 		return (ft_putnbr_u(va_arg(args, unsigned int)));
 	else if (c == 'd' || c == 'i')
