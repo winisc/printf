@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-static int	ft_print_convert(char c, va_list args)
+static int	print_convert(char c, va_list args)
 {
 	if (c == '%')
 		return (ft_putchar('%'));
@@ -53,7 +53,7 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == '%' && ft_strchr("cspdiuxX%", format[i + 1]))
 		{
 			i++;
-			res += ft_print_convert((char) format[i], args);
+			res += print_convert((char) format[i], args);
 		}
 		else
 			res += ft_putchar(format[i]);
